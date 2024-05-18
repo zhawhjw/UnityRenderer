@@ -66,11 +66,12 @@ This is a Unity rendering pipline for trajecotry data dumped from Threejs
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+### 1. Pre-configuration for scenario 
 After open the project, find and double click to load 'SampleScene' under the 'Scene' folder in Unity file navigator window. Then, click the 'AgentManager' game object. On the right side of 'Inspector' window, you should see:  
 
 [![Install FFmpeg][AgentManager-Parameters]]()
 
-### Red Area - Input Data
+#### Red Area - Input Data
 
 **Source Path**: A file path to the all data files
 
@@ -82,15 +83,22 @@ After open the project, find and double click to load 'SampleScene' under the 'S
  
 **Extension**: suffix for all data files
 
-### Green Area - Model
+#### Green Area - Model
 
 **Agent Prefab**: agent model
+
+_note_:
+
+* All valid agent models udner "Assets/Agent" folder
+* **Agent CapsulePBD Variant** is tuned for threejs capsule rendering only
+* **Agent Variant 1** is mix-amo agent model
+* **Agent Variant** is used for RL paper rendering
 
 **Obstacle Prefab**: obstacle (sphere) model
  
 **Obstacle Wall Prefab**: wall (cube) model
 
- ### Orange Area - Parameter for Animation and Simulation
+#### Orange Area - Parameter for Animation and Simulation
 
 **A**: lower-bound of normalized velocity value. Default should be 0.
 
@@ -98,6 +106,7 @@ After open the project, find and double click to load 'SampleScene' under the 'S
  
 **T**: Threshold value to filter out normalized velocity value (i.e. [A, B] -> [T, B]). No default value and need fine-tuned.
 
+_Note_:
 * **A**, **B**, **T** are special variables that tied to make leg animation better. All velocity data will be: 
   1. normalized between **A** ~ **B**
   2. filter out any values below **T**
@@ -107,6 +116,7 @@ After open the project, find and double click to load 'SampleScene' under the 'S
 * If value **3.6** appears, it means the animation is 90% of original walking speed: **3.6** / (**4** - **0** )
 * In most of case, walking is good enough so we don't need value go beyond then **4**.
 * **A**, **B**, **T** have to be fin-tuned for each scenario.
+
 [![Blend Tree][Blend-Tree]]()
 
 **Delta**: How many frames you want to cut-off at the end of simulation. For avoiding agent shift to target location.
@@ -120,7 +130,7 @@ After open the project, find and double click to load 'SampleScene' under the 'S
 
 
 
-### Blue Area - Object Rendering 
+#### Blue Area - Object Rendering 
 
 **Use Capsules**: enable capsule object instead of humanoid.
 
@@ -132,7 +142,7 @@ After open the project, find and double click to load 'SampleScene' under the 'S
 
 **Color Overrides**: click to expand the color palette for agent groups. Right side is the number of groups.
 
-### Purple Area - Trajectory Rendering 
+#### Purple Area - Trajectory Rendering 
 
 **Render Trajectory**: enable the visualization of trajectory
 
@@ -144,7 +154,7 @@ After open the project, find and double click to load 'SampleScene' under the 'S
 
 **Gradient Flag**: if **Render Trajectory** enabled, enable it will make trajectory color has gradient effect
 
-### Yellow Area - Special Condition
+#### Yellow Area - Special Condition
 
 **Bilas**: if the data (before and after convert) from Bilas
 
@@ -154,9 +164,51 @@ After open the project, find and double click to load 'SampleScene' under the 'S
 
 **Shift Degree**: if **Side Stepping Flag** enabled, this should be 90
 
-### Other Areas
+#### Other Areas
 
-Either legacy paramter, trival values  or should not be touched
+Trival or you should not touch
+
+#### Floor
+After open the project, find and double click to load 'SampleScene' under the 'Scene' folder in Unity file navigator window. Then, click the 'GridGenerationManager' game object. On the right side of 'Inspector' window, you should see:  
+
+[![Grid Manager][Grid]]()
+
+**Size**: control the size of each grid
+
+**Margin**: control the size of margin between each grid
+
+**Row**: width of floor
+
+**Column**: length of floor
+
+**Start**: shift of generated floor
+
+### 2. Run Time
+
+After click play button, you will see:
+
+[![Run Time][Run-Time]]()
+
+**Start Capture**: allows you to start recording. After click, it becomes **Stop Capture** and **Cancel Capture** buttons.
+
+**Stop Capture**: finish recording and start to rendering
+
+**Cancel Capture**: discard current recording
+
+**Browse**: allows you to to open the finished renderred recordings
+
+_Note_:
+* The small bar in red area is the progress bar which tied to **Frame Index**.
+
+* Too many times recording will lead graphic card memory error. You need to restart the whole unity to clean the cache. 
+
+* Better to use **Stop Capture** instead of **Cancel Capture** even if you want to discard current recording, because **Cancel Capture** is buggy.
+
+* You could use arrow keys to move camera, hold right-click to rotate camera, use wheel to zoom in/out camera
+
+* F8 allows you to capture the screenshot of current view (store under "Assets/Backgrounds")
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -164,7 +216,7 @@ Either legacy paramter, trival values  or should not be touched
 
 <!-- ROADMAP -->
 ## Roadmap
-
+- [X] Added comments in code
 - [ ] upcoming...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -176,5 +228,8 @@ Either legacy paramter, trival values  or should not be touched
 [FFmpeg]: demo1.png
 [AgentManager-Parameters]: demo.png
 [Blend-Tree]: demo2.png
+[Run-Time]: demo3.png
+[Grid]: demo4.png
+
 
 
