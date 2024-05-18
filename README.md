@@ -71,7 +71,7 @@ After open the project, find and double click to load 'SampleScene' under the 'S
 
 [![Install FFmpeg][AgentManager-Parameters]]()
 
-#### Red Area - Input Data
+#### 1.1.1 Red Area - Input Data
 ---
 **Source Path**: A file path to the all data files
 
@@ -83,7 +83,7 @@ After open the project, find and double click to load 'SampleScene' under the 'S
  
 **Extension**: suffix for all data files
 
-#### Green Area - Model
+#### 1.1.2 Green Area - Model
 ---
 **Agent Prefab**: agent model
 
@@ -98,7 +98,7 @@ _note_:
  
 **Obstacle Wall Prefab**: wall (cube) model
 
-#### Orange Area - Parameter for Animation and Simulation
+#### 1.1.3 Orange Area - Parameter for Animation and Simulation
 ---
 **A**: lower-bound of normalized velocity value. Default should be 0.
 
@@ -130,7 +130,7 @@ _Note_:
 
 
 
-#### Blue Area - Object Rendering 
+#### 1.1.4 Blue Area - Object Rendering 
 ---
 **Use Capsules**: enable capsule object instead of humanoid.
 
@@ -142,7 +142,7 @@ _Note_:
 
 **Color Overrides**: click to expand the color palette for agent groups. Right side is the number of groups.
 
-#### Purple Area - Trajectory Rendering 
+#### 1.1.5 Purple Area - Trajectory Rendering 
 ---
 **Render Trajectory**: enable the visualization of trajectory
 
@@ -154,7 +154,7 @@ _Note_:
 
 **Gradient Flag**: if **Render Trajectory** enabled, enable it will make trajectory color has gradient effect
 
-#### Yellow Area - Special Condition
+#### 1.1.6 Yellow Area - Special Condition
 ---
 **Bilas**: if the data (before and after convert) from Bilas
 
@@ -164,11 +164,11 @@ _Note_:
 
 **Shift Degree**: if **Side Stepping Flag** enabled, this should be 90
 
-#### Other Areas
+#### 1.1.7 Other Areas
 ---
 Trival or you should not touch
 
-#### Floor
+#### 1.2 Floor
 ---
 After open the project, find and double click to load 'SampleScene' under the 'Scene' folder in Unity file navigator window. Then, click the 'GridGenerationManager' game object. On the right side of 'Inspector' window, you should see:  
 
