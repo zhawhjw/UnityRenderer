@@ -72,7 +72,7 @@ After open the project, find and double click to load 'SampleScene' under the 'S
 [![Install FFmpeg][AgentManager-Parameters]]()
 
 #### Red Area - Input Data
-
+---
 **Source Path**: A file path to the all data files
 
 **Source File**: A file name that contains converted Threejs agent trajectory data 
@@ -84,7 +84,7 @@ After open the project, find and double click to load 'SampleScene' under the 'S
 **Extension**: suffix for all data files
 
 #### Green Area - Model
-
+---
 **Agent Prefab**: agent model
 
 _note_:
@@ -99,7 +99,7 @@ _note_:
 **Obstacle Wall Prefab**: wall (cube) model
 
 #### Orange Area - Parameter for Animation and Simulation
-
+---
 **A**: lower-bound of normalized velocity value. Default should be 0.
 
 **B**: upper-bound of normalized velocity value. Default should be 4. 
@@ -131,7 +131,7 @@ _Note_:
 
 
 #### Blue Area - Object Rendering 
-
+---
 **Use Capsules**: enable capsule object instead of humanoid.
 
 **Use Shadows**: enable shadow for object.
@@ -143,7 +143,7 @@ _Note_:
 **Color Overrides**: click to expand the color palette for agent groups. Right side is the number of groups.
 
 #### Purple Area - Trajectory Rendering 
-
+---
 **Render Trajectory**: enable the visualization of trajectory
 
 **Trajectory Thickness**: if **Render Trajectory** enabled, adjust thickness of trajectory
@@ -155,7 +155,7 @@ _Note_:
 **Gradient Flag**: if **Render Trajectory** enabled, enable it will make trajectory color has gradient effect
 
 #### Yellow Area - Special Condition
-
+---
 **Bilas**: if the data (before and after convert) from Bilas
 
 **Orientation Flag**: if orientation data is needed (bottleneck scenario)
@@ -165,10 +165,11 @@ _Note_:
 **Shift Degree**: if **Side Stepping Flag** enabled, this should be 90
 
 #### Other Areas
-
+---
 Trival or you should not touch
 
 #### Floor
+---
 After open the project, find and double click to load 'SampleScene' under the 'Scene' folder in Unity file navigator window. Then, click the 'GridGenerationManager' game object. On the right side of 'Inspector' window, you should see:  
 
 [![Grid Manager][Grid]]()
