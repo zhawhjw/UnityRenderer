@@ -224,7 +224,17 @@ public class AgentManager : MonoBehaviour
 		}
 		rawFrames = System.IO.File.ReadAllLines(sourcePath + @"/" + sourceFile + @"." + extension);
 		// read the raw orientation data
-		string[] rawOrientations = System.IO.File.ReadAllLines(sourcePath + @"/" + sourceOrientationFile + @"." + extension);
+		string[] rawOrientations;
+
+		if (orentationFlag)
+        {
+			rawOrientations = System.IO.File.ReadAllLines(sourcePath + @"/" + sourceOrientationFile + @"." + extension);
+        }
+        else
+        {
+			rawOrientations = new string[] { };
+
+		}
 
 		// grab the group counts from the first line of the raw trajectory data
 		string[] rawGroupCounts = rawFrames[0].Split(",");
