@@ -483,10 +483,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   worldScale: 1
-  sourcePath: C:\Code\TrajDataProcess
-  sourceFile: combined
-  sourceWallFile: bottleneck_wall
-  sourceOrientationFile: combined_r
+  sourcePath: D:\Downloads\I3D Render
+  sourceFile: 2_agents_V2
+  sourceWallFile: 
+  sourceOrientationFile: 
   extension: txt
   agentPrefab: {fileID: 3516192943034816226, guid: 7ae2d46ea7807104481cbfe716486d4f, type: 3}
   obstaclePrefab: {fileID: 716101367485553798, guid: 743cd5a09d0114d40ab7e276f356e722, type: 3}
@@ -517,7 +517,7 @@ MonoBehaviour:
   fullTrajectory: 1
   gradientFlag: 0
   BILAS: 1
-  orentationFlag: 1
+  orentationFlag: 0
   sideSteppingFlag: 1
   shiftDegree: 0
   passes: 0
