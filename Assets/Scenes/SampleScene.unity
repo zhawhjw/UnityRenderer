@@ -484,7 +484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worldScale: 1
   sourcePath: D:\Downloads\I3D Render
-  sourceFile: 2_agents_V2
+  sourceFile: Obstacle_Ours
   sourceWallFile: 
   sourceOrientationFile: 
   extension: txt
