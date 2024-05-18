@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1;" />
+    <ui:VisualElement style="flex-direction: row; justify-content: space-between;">
+        <ui:Toggle label="Use Capsules" name="UseCapsuleToggle" value="true" focusable="false" />
+        <ui:Toggle label="Display Shadows" name="ShadowToggle" value="true" focusable="false" />
+        <ui:Toggle label="Display Arrows" name="ArrowToggle" value="true" focusable="false" />
+        <ui:Button text="Teleport to Sky" display-tooltip-when-elided="true" name="SkyViewButton" focusable="false" />
+        <ui:Button text="Hide UI (Press Escape to Exit)" display-tooltip-when-elided="true" name="HideUIButton" focusable="false" />
+    </ui:VisualElement>
+    <ui:Slider picking-mode="Ignore" label="Speed" value="1" high-value="5" name="SpeedSlider" low-value="-5" focusable="false" />
+    <ui:SliderInt picking-mode="Ignore" label="Frame" value="0" high-value="100" name="FrameSlider" focusable="false" show-input-field="false" />
+</ui:UXML>
